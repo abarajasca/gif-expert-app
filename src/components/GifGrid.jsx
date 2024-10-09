@@ -1,7 +1,7 @@
 import GifItem from './GifItem';
 import useFetchGifs from '../hooks/useFetchGifs';
 
-const GifGrid = ({ category }) => {
+const GifGrid = ({ category, onRemoveCategory }) => {
     
     const {gifs,isLoading} = useFetchGifs(category);
 
@@ -19,7 +19,21 @@ const GifGrid = ({ category }) => {
      
     return (
     <>
-     <h3> { category } </h3>
+         <span> 
+            <h3 id={category}> { category }</h3>
+         </span>
+         <span className="center">
+            <a href='#index'>Indice</a>
+         </span>|
+         <span className="center">
+            <button onClick={() => onRemoveCategory(category)}>
+               Remover
+            </button>
+         </span> 
+         <hr/>
+         <br/>
+      
+     
      {
         isLoading && <h2>Cargando..</h2>
      }

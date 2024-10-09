@@ -10,26 +10,35 @@ export default function GifExpertApp() {
         setCategories([category,...categories]);
   }
 
+  const removeCategory = (category) => {
+    categories.splice(categories.indexOf(category),1);
+    setCategories([...categories]);    
+  }
+
   return (
     <>
+      <h1 id="index">Gif Expert App</h1>
       
-        {/* Titulo */}
-      <h1>GifExpertApp</h1>
-
-      {/* Input */}
       <ReadCategory readCategory={ addCategory }></ReadCategory>
-
-        {/* <button onClick={addCategory}>Agregar Categoria</button> */}
-      {/* Listado de Gif */}
-      <ol>
+      <div className="center">
+        {
+          categories.map( (category)=>(
+            <span key={category} className='center'>
+              <a href={`#${ category }`}>{category}</a>
+            </span>
+          ))
+        }
+      </div>
+      
+      <ol key={'hola'}>
         { 
             categories.map ( category => (
-                <GifGrid key={category} category={category}></GifGrid >
+                <GifGrid key={category} category={category} onRemoveCategory={removeCategory}  ></GifGrid >
                 )
             ) 
         }
       </ol>
-        {/* Gif Item */}
+
     </>
   )
 }
