@@ -19,6 +19,7 @@ const GifGrid = ({ category, onRemoveCategory }) => {
      
     return (
     <>
+         <hr />
          <span> 
             <h3 id={category}> { category }</h3>
          </span>
@@ -26,11 +27,11 @@ const GifGrid = ({ category, onRemoveCategory }) => {
             <a href='#index'>Indice</a>
          </span>|
          <span className="center">
-            <button onClick={() => onRemoveCategory(category)}>
+            <button className="btn btn-outline-primary" onClick={() => onRemoveCategory(category)}>
                Remover
             </button>
-         </span> 
-         <hr/>
+         </span>
+         <br/>
          <br/>
       
      

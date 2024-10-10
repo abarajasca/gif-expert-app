@@ -18,17 +18,17 @@ export default function GifExpertApp() {
   return (
     <>
       <h1 id="index">Gif Expert App</h1>
-      
+           
       <ReadCategory readCategory={ addCategory }></ReadCategory>
       <div className="center">
         {
           categories.map( (category)=>(
             <span key={category} className='center'>
-              <a href={`#${ category }`}>{category}</a>
+              <a href={`#${ category }`} className="badge rounded-pill bg-secondary">{category}</a>
             </span>
           ))
         }
-      </div>
+      </div>      
       
       <ol key={'hola'}>
         { 

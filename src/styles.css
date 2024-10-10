@@ -1,10 +1,11 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgb(234, 234, 234);
-}
+  background-color: rgb(234, 234, 234); 
+  border-radius: 5px;  
+} 
 
 body {
-  padding: 60px;
+  padding: 60px;  
 }
 
 input {
@@ -68,9 +69,10 @@ button {
   padding: 5px 20px 5px 20px;   
   border-radius: 5px;
   border: 1px solid rgb(97, 32, 158);
-}
+} 
 
 .center {
   padding: 10px 10px ;
   text-align: center
 }
+
