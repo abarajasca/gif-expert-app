@@ -10,7 +10,7 @@ export default function GifExpertApp() {
         setCategories([category,...categories]);
   }
 
-  const removeCategory = (category) => {
+  const removeCategory = (category) => {    
     categories.splice(categories.indexOf(category),1);
     setCategories([...categories]);    
   }

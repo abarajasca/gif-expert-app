@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import React,{ useState } from 'react'
+
 
 export default function ReadCategory({ readCategory }) {
   
@@ -17,8 +19,8 @@ export default function ReadCategory({ readCategory }) {
   }
 
   return (
-    <form onSubmit={ onSubmit }>
-        <input 
+    <form onSubmit={ onSubmit } aria-label='form'>
+        <input             
             type="text" 
             placeholder='Buscar Gifs'
             value={ inputValue }
@@ -26,4 +28,8 @@ export default function ReadCategory({ readCategory }) {
             />
     </form>    
   )
+}
+
+ReadCategory.propTypes = {
+ readCategory: PropTypes.func.isRequired
 }

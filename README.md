@@ -14,5 +14,5 @@ Project created for training purpose based on course:
 
 # Development
 - npm install
-- Configure ./configuration/.env.local ( VITE_API_KEY=XXXX ) with your [Giphy API KEY](https://support.giphy.com/hc/en-us/articles/360035158412--Do-I-need-to-obtain-an-API-Key-to-get-started-playing-with-the-GIPHY-API)
+- Configure ./configuration/.env.local and .env.test ( VITE_API_KEY=XXXX ) with your [Giphy API KEY](https://support.giphy.com/hc/en-us/articles/360035158412--Do-I-need-to-obtain-an-API-Key-to-get-started-playing-with-the-GIPHY-API)
 - npm run dev

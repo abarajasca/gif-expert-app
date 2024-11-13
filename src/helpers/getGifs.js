@@ -1,7 +1,8 @@
-//const API_KEY = import.meta.env.VITE_API_KEY;
+import { getEnvironment } from "../env/getEnvironment";
 
 const getGifs = async (category) => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=${import.meta.env.VITE_API_KEY}&q=${ category }&limit=10`
+    const { VITE_API_KEY } = getEnvironment();
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${VITE_API_KEY}&q=${ category }&limit=10`
     
     const resp = await fetch ( url );
     const { data } = await resp.json();
